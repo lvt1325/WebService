@@ -52,11 +52,11 @@
                     <Columns>
                         <telerik:GridBoundColumn FilterDelay="200" DataField="CustomerID" HeaderText="Customer ID" ReadOnly="true" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn FilterDelay="200" DataField="CompanyName" HeaderText="Company Name" ColumnEditorID="GridTextBoxEditor">
+                        <telerik:GridBoundColumn FilterDelay="200" DataField="CompanyName" HeaderText="Company Name" ColumnEditorID="GridTextBoxEditor" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="ContactName" HeaderText="Contact Name" ColumnEditorID="GridTextBoxEditor">
+                        <telerik:GridBoundColumn DataField="ContactName" HeaderText="Contact Name" ColumnEditorID="GridTextBoxEditor" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="ContactTitle" HeaderText="Contact Title" ColumnEditorID="GridTextBoxEditor">
+                        <telerik:GridBoundColumn DataField="ContactTitle" HeaderText="Contact Title" ColumnEditorID="GridTextBoxEditor" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
                         <telerik:GridClientDeleteColumn HeaderText="Delete">
                             <HeaderStyle Width="70px" />

@@ -25,32 +25,8 @@ namespace WebApplication1
             return GetCustomers().Count;
         }
 
-        //[WebMethod]
-        ////[AspNetCacheProfile("NoCache")]
-        //public CustomersResult GetCustomers()
-        //{
-        //    List<ServiceCustomer> list = new List<ServiceCustomer>();
-        //    for (int i = 0; i < 7; i++)
-        //    {
-        //        ServiceCustomer c = new ServiceCustomer()
-        //        {
-        //            CustomerID = "CustomerID" + i.ToString(),
-        //            CompanyName = "CompanyName" + i.ToString(),
-        //            ContactName = "ContactName" + i.ToString(),
-        //            ContactTitle = "ContactTitle" + i.ToString(),
-        //            Address = "Address" + i.ToString()
-        //        };
-        //        list.Add(c);
-        //    }
-        //    return new CustomersResult
-        //    {
-        //        Data = list,
-        //        Count = list.Count
-        //    };
-
-        //}
-
         [WebMethod]
+        //[AspNetCacheProfile("NoCache")]
         public CustomersResult GetCustomers()
         {
             List<ServiceCustomer> list = new List<ServiceCustomer>();

@@ -44,17 +44,17 @@
     <div class="demo-container no-bg">
         <h3>RadGrid bound to RadClientDataSource</h3>
         <div id="grid">
-            <telerik:RadGrid RenderMode="Lightweight" ID="RadGrid1" runat="server" ClientDataSourceID="RadClientDataSource1" AllowPaging="true"
-                AllowSorting="true" AllowFilteringByColumn="true" PageSize="3">
+            <telerik:RadGrid FilterType="Combined" RenderMode="Lightweight" ID="RadGrid1" runat="server" ClientDataSourceID="RadClientDataSource1" AllowPaging="true"
+                AllowSorting="true" AllowFilteringByColumn="true" PageSize="3" OnFilterCheckListItemsRequested="RadGrid1_FilterCheckListItemsRequested">
                 <MasterTableView  ClientDataKeyNames="CustomerID" EditMode="Batch" CommandItemDisplay="Top" BatchEditingSettings-HighlightDeletedRows="true">
                     <Columns>
-                        <telerik:GridBoundColumn FilterDelay="200" DataField="CustomerID" HeaderText="Customer ID" ReadOnly="true">
+                        <telerik:GridBoundColumn FilterDelay="200" DataField="CustomerID" HeaderText="Customer ID" ReadOnly="true" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn FilterDelay="200" DataField="CompanyName" HeaderText="Company Name" ColumnEditorID="GridTextBoxEditor">
+                        <telerik:GridBoundColumn FilterDelay="200" DataField="CompanyName" HeaderText="Company Name" ColumnEditorID="GridTextBoxEditor" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="ContactName" HeaderText="Contact Name" ColumnEditorID="GridTextBoxEditor">
+                        <telerik:GridBoundColumn DataField="ContactName" HeaderText="Contact Name" ColumnEditorID="GridTextBoxEditor" FilterCheckListEnableLoadOnDemand="true">
                         </telerik:GridBoundColumn>
-                        <telerik:GridBoundColumn DataField="ContactTitle" HeaderText="Contact Title" ColumnEditorID="GridTextBoxEditor">
+                        <telerik:GridBoundColumn DataField="ContactTitle" HeaderText="Contact Title" ColumnEditorID="GridTextBoxEditor" FilterCheckListEnableLoadOnDemand="true"> 
                         </telerik:GridBoundColumn>
                         <telerik:GridClientDeleteColumn HeaderText="Delete">
                             <HeaderStyle Width="70px" />
