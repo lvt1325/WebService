@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormASMX.aspx.cs" Inherits="WebApplication1.WebFormASMX" %>
+<!DOCTYPE html>
 
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head runat="server">
@@ -68,7 +69,7 @@
         </div>
         <telerik:GridTextBoxColumnEditor ID="GridTextBoxEditor" runat="server" TextBoxStyle-Width="230px"></telerik:GridTextBoxColumnEditor>
         <telerik:RadClientDataSource ID="RadClientDataSource1" runat="server" AllowBatchOperations="true">
-            <ClientEvents OnCustomParameter="ParameterMap" OnDataParse="Parse" />
+            <ClientEvents OnCustomParameter="ParameterMap" OnDataParse="Parse"/>
             <DataSource>
                 <WebServiceDataSourceSettings BaseUrl="MyASMXService.asmx/">
                     <Select Url="GetCustomers" DataType="JSON" RequestType="Post" ContentType="application/json"/>
@@ -77,14 +78,14 @@
                     <Delete Url="DeleteCustomers" DataType="JSON" />
                 </WebServiceDataSourceSettings>
             </DataSource>
-            <Schema>
+            <%--<Schema>
                 <Model ID="CustomerID">
                     <telerik:ClientDataSourceModelField FieldName="CustomerID" DataType="String" />
                     <telerik:ClientDataSourceModelField FieldName="CompanyName" DataType="String" />
                     <telerik:ClientDataSourceModelField FieldName="ContactName" DataType="String" />
                     <telerik:ClientDataSourceModelField FieldName="ContactTitle" DataType="String" />
                 </Model>
-            </Schema>
+            </Schema>--%>
         </telerik:RadClientDataSource>
     </div>
     </form>
